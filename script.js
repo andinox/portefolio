@@ -18,7 +18,7 @@ function display_load() {
 async function set_display() {
     let temps;
     while (load <= 100) {
-        temps = getRandomArbitraryInt(10, 15); // 20 - 150
+        temps = getRandomArbitraryInt(20, 150); // 20 - 150
         display_load()
         await sleep(temps);
     }
