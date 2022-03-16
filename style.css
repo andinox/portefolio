@@ -1,0 +1,300 @@
+    html,
+    body {
+        height: 99%;
+        position: relative;
+        background-color: #333;
+    }
+
+    body {
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    .deleted {
+        display: none;
+    }
+    
+    #bg #loading {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        user-select: none;
+    }
+    
+    .load {
+        font-size: 100px;
+        font-family: Courier, monospace;
+    }
+    
+    #balise,
+    #balise2 {
+        color: rgb(117, 116, 116);
+        font: weight 700px;
+    }
+    
+    #space {
+        font-size: 10px;
+    }
+    
+    #loader {
+        color: rgb(154, 100, 204);
+    }
+    
+    .finish {
+        font-size: 0px;
+        transition: 400ms;
+    }
+    
+    .finish-space {
+        word-spacing: 80vmax;
+        transition: 3s;
+    }
+    
+    .finish-balise-alpha {
+        opacity: 0;
+        transition: 800ms;
+    }
+    
+    .img {
+        opacity: 0;
+    }
+    
+    .img-alpa {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .img-alpa {
+        opacity: 50;
+        transition: 1s;
+    }
+
+    .mouse-pos {
+        min-height: 75%;
+        display: grid;
+        align-content: center;
+        justify-content: center;
+    }
+    
+    .mouse {
+        user-select: none;
+        opacity: 0;
+    }
+    
+
+    #language:hover {
+        font-size: 30px;
+        background-color: #333;
+        transition: 400ms;
+    }
+
+    .mouse-left {
+        z-index: 1;
+        position: absolute;
+        width: 100px;
+        height: 165px;
+        background-color: rgb(117, 116, 116);
+        opacity: 0%;
+        border-radius: 0% 49vw 0% 0%;
+        top: 20%;
+        left: 50%;
+    }
+    
+    .mouse-left:hover {
+        opacity: 15%;
+    }
+    
+    .mouse-right {
+        z-index: 1;
+        position: absolute;
+        width: 99px;
+        height: 165px;
+        background-color: rgb(117, 116, 116);
+        opacity: 0%;
+        border-radius: 10vw 0% 0% 0%;
+        top: 20%;
+        left: 44.6%;
+    }
+    
+    .mouse-right:hover {
+        opacity: 15%;
+    }
+    
+    .scroll,
+    .down {
+        display: flex;
+        justify-content: center;
+        user-select: none;
+        margin: auto;
+        color: rgb(117, 116, 116);
+        font-family: Courier, monospace;
+        font-weight: 800;
+        font-size: 25px;
+        opacity: 0;
+    }
+    
+    .down {
+        font-size: 50px;
+        margin-top: 10vh;
+        transform: rotate(90deg);
+    }
+    
+    .animation {
+        animation-duration: 2s;
+        animation-name: clignoter;
+        animation-iteration-count: infinite;
+        transition: none;
+    }
+    
+    @keyframes clignoter {
+        0% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0;
+        }
+    }
+    
+    .scroll span {
+        color: rgb(154, 100, 204);
+        font-weight: 1000;
+    }
+    
+    .lang {
+        display: flex;
+        justify-content: center;
+    }
+
+    .none {
+        display: none; 
+    }
+
+    .lang ul {
+        margin: 0px;
+        padding: 0px;
+        padding-top: 20vh;
+        display: flex;
+    }
+
+    .lang ul li::marker {
+        content: "";
+    }   
+    
+    .francais,
+    .anglais {
+        color: rgb(154, 100, 204);
+        text-decoration: none;
+        padding: 20px;
+        font-family: sans-serif	;
+        border: 3.2px solid rgb(117, 116, 116);
+    }
+    
+    .anglais {
+        border-right: 1px;
+        border-radius: 50vw 0vw 0vw 50vw;
+    }
+    
+    .francais {
+        border-left: 1px;
+        border-radius: 0vw 50vw 50vw 0vw;
+    }
+
+    .anglais:hover {
+        border-radius: 50vw 0vw 0vw 50vw;
+        background-color: rgb(32, 32, 32,20%);
+    }
+
+    
+    .francais:hover {
+        border-left: 1px;
+        border-radius: 0vw 50vw 50vw 0vw;
+        background-color: rgb(32, 32, 32, 20%);
+    }
+
+    .not_clicked::before {
+        content: "✓ ";
+        opacity: 0;
+    }
+
+    .clicked_lang::before {
+        color: rgb(154, 100, 204);
+        content: "✓ ";
+    }
+
+    .view {
+        opacity: 50;
+        transition: 400ms;
+    }
+
+    #lvl {
+        user-select: none;
+        margin: 20px;
+        margin-top: 140px;
+        height: 90%;
+    }
+
+    #lvllang {
+        border: 1px solid black;
+    }
+
+    .imglang {
+        width: 75px;
+        height: 75px;
+    }
+
+    @media screen and (max-width: 750px) {
+        .mouse-left {
+            z-index: 1;
+            position: absolute;
+            width: 100px;
+            height: 165px;
+            background-color: rgb(117, 116, 116);
+            opacity: 0%;
+            border-radius: 0% 49vw 0% 0%;
+            top: 18.5%;
+            left: 50%;
+        }
+        .mouse-left:hover {
+            opacity: 15%;
+        }
+        .mouse-right {
+            z-index: 1;
+            position: absolute;
+            width: 99px;
+            height: 165px;
+            background-color: rgb(117, 116, 116);
+            opacity: 0%;
+            border-radius: 49vw 0% 0% 0%;
+            top: 18.5%;
+            left: 25.5%;
+        }
+        .mouse-right:hover {
+            opacity: 15%;
+        }
+        .down {
+            font-size: 50px;
+            margin-top: 5vh;
+            transform: rotate(90deg);
+        }
+        .finish-space {
+            word-spacing: 50vw;
+            transition: 3s;
+        }
+        .scroll {
+            top: 72%;
+        }
+        .scroll span {
+            font-size: 0px;
+        }
+        .scroll span::before {
+            font-size: 25px;
+            content: "Scroll"
+        }
+    }
+
+
+    
