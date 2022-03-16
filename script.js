@@ -52,6 +52,8 @@ function display_mouse() {
     const mouse_left = document.getElementById("mouse-left");
     const mouse_right = document.getElementById("mouse-right");
     const lang = document.getElementsByClassName("lang")[0];
+    const article1 = document.getElementById('article1');
+    article1.classList.remove('none');
     lang.classList.remove("none")
     text_mouse.classList.add("view");
     mouse.classList.add("view");
