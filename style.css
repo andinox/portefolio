@@ -9,6 +9,9 @@
         margin: 0px;
         padding: 0px;
     }
+
+
+    
     
     .deleted {
         display: none;
@@ -169,7 +172,7 @@
 
     #name h1::before {
         content: '<';
-        padding-right: 10px;
+        padding-right: 20px;
         color: rgb(117, 116, 116);
     }
 
@@ -177,27 +180,6 @@
         color: rgb(154, 100, 204);
         font-size: 45px;
         font-family: Courier;
-    }
-
-    #name h1:hover{
-        animation-duration: 1s;
-        animation-name: moved;
-        animation-iteration-count: 1;
-        transition: 5s;
-    }
-
-    @keyframes moved {
-        25% {
-            font-size: 55px;
-            transform: rotate(-7deg);
-        }
-        75% {
-            font-size: 55px;
-            transform: rotate(7deg);
-        }
-        100% {
-            font-size: 50px;
-        }
     }
 
     @keyframes clignoter {
@@ -217,6 +199,7 @@
     .lang {
         display: flex;
         justify-content: center;
+        user-select: none;
     }
 
     .none {
@@ -294,6 +277,48 @@
     .imglang {
         width: 75px;
         height: 75px;
+    }
+
+    .reveal{
+        position: relative;
+        transform: translateY(150px);
+        opacity: 0;
+        transition: 2s all ease;
+    }
+    
+    .reveal.active{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+    .backstats {
+        display: flex;
+        justify-content: center;
+        
+    }
+
+    .stats {
+        display: flex;
+        justify-content: center;
+        width: 60%;
+    }
+
+    .stats::after {
+        content: '';
+        position: relative;
+        left: -55.5%;
+        width: 15%;
+        border-left: 5px solid rgb(117, 116, 116);
+        border-bottom: 5px solid rgb(117, 116, 116);
+    }
+
+    .stats::before {
+        content: '';
+        position: relative;
+        left: 55.5%;
+        width: 15%;
+        border-top: 5px solid rgb(117, 116, 116);
+        border-right: 5px solid rgb(117, 116, 116);
     }
 
     @media screen and (max-width: 750px) {
